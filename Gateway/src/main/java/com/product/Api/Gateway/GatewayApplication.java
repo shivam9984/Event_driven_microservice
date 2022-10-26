@@ -15,7 +15,7 @@ public class GatewayApplication {
 	public RouteLocator configureRoute(RouteLocatorBuilder builder) {
 		return builder.routes()
 //				.route("paymentId", r->r.path("/payment/**").uri("http://localhost:9009")) //static routing
-				.route("productId", r->r.path("/order/**").uri("lb://product-service")) //dynamic routing
+				.route("productId", r->r.path("/product").uri("lb://product-service")) //dynamic routing
 				.build();
 	}
 
